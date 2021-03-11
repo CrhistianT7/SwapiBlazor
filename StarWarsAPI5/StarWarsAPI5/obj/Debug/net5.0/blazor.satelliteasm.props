@@ -1,0 +1,15 @@
+﻿<SatelliteAssembly>
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll" Culture="cs" DestinationSubDirectory="cs\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll" Culture="de" DestinationSubDirectory="de\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll" Culture="es" DestinationSubDirectory="es\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll" Culture="fr" DestinationSubDirectory="fr\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll" Culture="it" DestinationSubDirectory="it\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll" Culture="ja" DestinationSubDirectory="ja\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll" Culture="ko" DestinationSubDirectory="ko\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll" Culture="pl" DestinationSubDirectory="pl\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll" Culture="pt-BR" DestinationSubDirectory="pt-BR\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll" Culture="ru" DestinationSubDirectory="ru\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll" Culture="tr" DestinationSubDirectory="tr\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll" Culture="zh-Hans" DestinationSubDirectory="zh-Hans\" />
+  <Assembly Name="C:\Users\Crhistian\.nuget\packages\microsoft.codeanalysis.common\3.9.0\lib\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll" Culture="zh-Hant" DestinationSubDirectory="zh-Hant\" />
+</SatelliteAssembly>

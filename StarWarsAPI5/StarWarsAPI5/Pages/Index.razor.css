@@ -1,0 +1,8 @@
+﻿h3 {
+    color: yellow;
+}
+
+.welcome {
+    background-image: url(../wwwroot/images/space.png);
+    height: 100px;
+}

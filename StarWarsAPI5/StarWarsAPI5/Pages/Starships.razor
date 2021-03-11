@@ -1,0 +1,29 @@
+﻿@page "/starships"
+
+<div class="form-inline" style="align-items: center;">
+    <label class=" sr-only" for="filter-name">Filter</label>
+    <input type="text" class="form-control mb-2 mr-sm-2"
+           @bind-value="NameFilter"
+           @bind-value:event="oninput"
+           placeholder="Filter by Name" />
+    <button type="button" class="btn btn-danger mb-2" @onclick="Clear"> Clear</button>
+</div>
+
+<Pagination TotalPagesQuantity="TotalPageQuantity" CurrentPage="CurrentPage" Radius="2" SelectedPage="SelectedPage" />
+
+<div>
+    @if (_Starships != null)
+    {
+        @foreach (var starship in _Starships)
+        {
+            <div>@starship.Name</div>
+            <a href="@($"starships/{@starship.Name}/{CurrentPage}")">More information</a>
+        }
+    }
+    else
+    {
+        <div>
+            Loading ...
+        </div>
+    }
+</div>
