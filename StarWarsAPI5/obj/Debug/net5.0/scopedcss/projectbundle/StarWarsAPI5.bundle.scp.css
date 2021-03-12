@@ -105,13 +105,20 @@ h3[b-sj1tnebb66] {
 }
 
 .welcome[b-sj1tnebb66] {
-    background-image: url(../wwwroot/images/space.png);
-    height: 100px;
+    text-align: center;
 }
 /* /Pages/People.razor.rz.scp.css */
-a[b-qr2ntmcbhb] {
-    border: 4px solid yellow;
-    color: red;
+.button[b-qr2ntmcbhb] {
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
 }
 /* /Shared/Footer.razor.rz.scp.css */
 .foo[b-0jf1iot2p7] {
@@ -139,7 +146,6 @@ a[b-qr2ntmcbhb] {
 
 .main[b-t5qkpa4cw8] {
     flex: 1;
-    background-image: url("../wwwroot/images/space.png");
 }
 
 .sidebar[b-t5qkpa4cw8] {

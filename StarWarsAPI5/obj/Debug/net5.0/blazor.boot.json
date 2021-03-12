@@ -234,11 +234,11 @@
       "mscorlib.dll": "sha256-Fi+LybwHL\/VGD\/09OxxtYlT6exn9xVU+LdojZ9juR2c=",
       "netstandard.dll": "sha256-P8xX0ad1hKyWWbBxiXl3cYokFlDiuXwp3pqoYatH0kk=",
       "System.Private.CoreLib.dll": "sha256-2km83sNUTrumGJYdDzsN8RnJqv00vKWLCCh0UGajTB4=",
-      "StarWarsAPI5.dll": "sha256-RbD6\/XFy6Y70dCay5w4RT6coLugfSoC1d+4DiP1AFVg="
+      "StarWarsAPI5.dll": "sha256-nArs74EePFEKwuzm5fQYwyacDw4kePm7yGQ3OhZJxhc="
     },
     "lazyAssembly": null,
     "pdb": {
-      "StarWarsAPI5.pdb": "sha256-v1FQRIvWW50gOsPcNCH7aRkb7xQc7jZXWnFr\/qh+8Cg="
+      "StarWarsAPI5.pdb": "sha256-et7UV+WIjIaEX8Fv3xajI6gQ8MvBzhy95lGu6DjRA2s="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-ibxaSjW7s3aLVssChknhzCpgMTHGu4D48Q9OLP3dfe8=",

@@ -1,6 +1,12 @@
 ﻿@page "/people/{Name}/{currentPage}"
 
-<h1> Details for @Character.Name</h1>
-<h2>@Character.HairColor</h2>
-<h2>@Character.BirthYear</h2>
-
+<div>
+    <div><span style="color: yellow;">Name:</span><span style="color: white;"> @Character.Name</span></div>
+    <div><span style="color: yellow;">Birth Year:</span><span style="color: white;"> @Character.BirthYear</span></div>
+    <div>
+        <span style="color: yellow;">Films:</span>
+        <div style="color: white;">
+            @Character.Films
+        </div>
+    </div>
+</div>

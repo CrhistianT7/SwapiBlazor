@@ -18,14 +18,15 @@
         {
             @foreach (var character in _People)
             {
-                <div>
-                    <div>Name: @character.Name</div>
-                    <div>Height: @character.Height</div>
-                    <div> Skin Color: @character.SkinColor</div>
-                    <div></div>
-                    <a href="@($"people/{character.Name}/{@currentPage}")">More information</a>
+                <div style="margin: 10px">
+                    <div><span style="color: yellow;">Name:</span><span style="color: white;"> @character.Name</span></div>
+                    <div><span style="color: yellow;">Height:</span> <span style="color: white;"> @character.Height</span></div>
+                    <div><span style="color: yellow;">Mass:</span> <span style="color: white;"> @character.Mass</span></div>
+                    <div><span style="color: yellow;">Skin Color:</span> <span style="color: white;"> @character.SkinColor</span></div>
+                    <div><span style="color: yellow;">Gender:</span> <span style="color: white;"> @character.Gender</span></div>
+                    <a href="@($"people/{character.Name}/{@currentPage}")" style="color: white; border-radius: 5px; text-align: center; border-width: 1px; border-color: yellow; padding: 5px; text-decoration: none;">More information</a>
                 </div>
-            }
+                        }
         }
         else
         {
