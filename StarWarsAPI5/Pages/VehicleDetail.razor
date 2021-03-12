@@ -1,7 +1,9 @@
 ﻿@page "/vehicles/{Name}/{CurrentPage}"
 
-<h3>@Vehicle.Name</h3>
+<div>
+    <h3>@Vehicle.Name</h3>
+    <div>
+        @Vehicle.Crew
+    </div>
+</div>
 
-@code {
-
-}

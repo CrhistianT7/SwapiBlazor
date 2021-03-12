@@ -1,7 +1,9 @@
 ﻿@page "/starships/{Name}/{CurrentPage}"
 
-<h3>@Starship.Name</h3>
+<div>
+    <h3>@Starship.Name</h3>
+    <div>
+        Cargo Capacity: @Starship.CargoCapacity
+    </div>
+</div>
 
-@code {
-
-}
