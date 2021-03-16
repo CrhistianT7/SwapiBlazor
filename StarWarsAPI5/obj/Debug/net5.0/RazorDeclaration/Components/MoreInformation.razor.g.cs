@@ -89,6 +89,18 @@ using StarWarsAPI5.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 5 "E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\Components\MoreInformation.razor"
+       
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string reference { get; set; }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

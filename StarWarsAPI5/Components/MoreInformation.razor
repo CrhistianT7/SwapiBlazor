@@ -1,1 +1,11 @@
-﻿<a >More Information</a>
+﻿<a href="@reference">
+    @ChildContent
+</a>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string reference { get; set; }
+}

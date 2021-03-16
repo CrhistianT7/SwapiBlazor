@@ -25,16 +25,17 @@ namespace StarWarsAPI5.Services
             }
             catch (Exception ex)
             {
+                // Handle Error
                 Console.WriteLine(ex.Message);
                 return null;
             }
         }
 
-        public async Task<Character> GetCharacterByName(string Name = "Luke Skywalker")
+        public async Task<Character> GetCharacterByName(string CurrentPage, string Name)
         {
             try
             {
-                var response = await _Http.GetFromJsonAsync<SwapiListResponse<Character>>(_Http.BaseAddress.ToString() + $"people/?page={1}"); /** int.Parse(currentPage) */
+                var response = await _Http.GetFromJsonAsync<SwapiListResponse<Character>>(_Http.BaseAddress.ToString() + $"people/?page={int.Parse(CurrentPage)}"); 
                 return  response.Results.FirstOrDefault(character => character.Name == Name);
 
             }

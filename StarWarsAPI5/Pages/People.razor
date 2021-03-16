@@ -26,7 +26,8 @@
                     <div><span style="color: yellow;">Mass:</span> <span style="color: white;"> @character.Mass</span></div>
                     <div><span style="color: yellow;">Skin Color:</span> <span style="color: white;"> @character.SkinColor</span></div>
                     <div><span style="color: yellow;">Gender:</span> <span style="color: white;"> @character.Gender</span></div>
-                    <a href="@($"people/{character.Name}/{@CurrentPage}")" class="button">More information</a>
+                    @*<a href="@($"people/{character.Name}/{@CurrentPage}")" class="button">More information</a>*@
+                    <MoreInformation reference="@($"people/{character.Name}/{@CurrentPage}")"> More Information </MoreInformation>
                 </div>
                         }
         }

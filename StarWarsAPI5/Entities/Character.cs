@@ -20,6 +20,6 @@ namespace StarWarsSearcher.Entities
         [JsonPropertyName("birth_year")]
         public string BirthYear { get; set; }
         public string Gender { get; set; }
-        public string[] Films { get; set; }
+        public List<string> Films { get; set; }
     }
 }

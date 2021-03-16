@@ -6,7 +6,15 @@
     <div>
         <span style="color: yellow;">Films:</span>
         <div style="color: white;">
-            @Character.Films
+            @if(@Character.Films != null)
+            {
+                @foreach(var film in @Character.Films)
+                {
+                <div>
+                    <a href="@film" target="_blank" style="color: white;">@film</a>
+                </div>
+                }
+            }
         </div>
     </div>
 </div>

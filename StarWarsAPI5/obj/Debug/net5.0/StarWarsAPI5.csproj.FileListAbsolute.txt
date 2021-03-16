@@ -2478,3 +2478,4 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAP
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.dll
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\ref\StarWarsAPI5.dll
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.pdb
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Components\MoreInformation.razor.rz.scp.css

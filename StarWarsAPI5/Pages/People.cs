@@ -15,7 +15,6 @@ namespace StarWarsAPI5.Pages
 {
     public partial class People
     {
-        [Inject] HttpClient Http { get; set; }
         public IEnumerable<Character> _People { get; set; }
         [Inject]
         public IPeopleDataService PeopleDataService { get; set; }
@@ -34,12 +33,12 @@ namespace StarWarsAPI5.Pages
         }
         private async Task Filter()
         { 
-            _People = (await PeopleDataService.GetAllPeople(1, NameFilter));
+            _People = (await PeopleDataService.GetAllPeople(CurrentPage, NameFilter));
         }
         private async Task Clear()
         {
             NameFilter = string.Empty;
-            _People = (await PeopleDataService.GetAllPeople());
+            _People = (await PeopleDataService.GetAllPeople(CurrentPage, NameFilter));
         }
     }
 }
