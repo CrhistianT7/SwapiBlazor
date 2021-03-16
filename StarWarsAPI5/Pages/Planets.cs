@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using StarWarsAPI5.Services;
 using StarWarsSearcher.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,14 +14,26 @@ namespace StarWarsAPI5.Pages
     {
         [Inject] HttpClient Http { get; set; }
         private IEnumerable<Planet> _Planets { get; set; }
+        [Inject]
+        public IPlanetDataService PlanetDataService { get; set; }
         public int CurrentPage = 1;
-        private int TotalPageQuantity;
+        private int TotalPageQuantity = 7;
         private string NameFilter { get; set; } = "";
         protected override async Task OnInitializedAsync()
         {
-            await GetPlanets();
+            _Planets = (await PlanetDataService.GetAllPlanets());
         }
         private async Task SelectedPage(int page)
+        {
+            CurrentPage = page;
+            _Planets = (await PlanetDataService.GetAllPlanets());
+        }
+        private async Task Clear()
+        {
+            NameFilter = string.Empty;
+            _Planets = (await PlanetDataService.GetAllPlanets());
+        }
+        /*private async Task SelectedPage(int page)
         {
             CurrentPage = page;
             await GetPlanets(page);
@@ -36,8 +49,7 @@ namespace StarWarsAPI5.Pages
             {
                 var response = await Http.GetFromJsonAsync<SwapiListResponse<Planet>>(Http.BaseAddress.ToString() + $"planets/?page={page}");
                 TotalPageQuantity = response.Count / 10 + 1;
-                _Planets = response.Results;
-                _Planets = _Planets.Where(film => film.Name.Contains(NameFilter));
+                _Planets = response.Results.Where(film => film.Name.Contains(NameFilter));
 
             }
             catch (Exception ex)
@@ -45,6 +57,6 @@ namespace StarWarsAPI5.Pages
                 //Handle Error
                 Console.WriteLine(ex.Message);
             }
-        }
+        }*/
     }
 }

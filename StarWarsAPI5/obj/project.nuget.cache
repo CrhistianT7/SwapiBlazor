@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "k2osgk8EAUsa3wSpGuR5YEzPlYegG71f/SUNicRgCeNrUjC8l8Q5dtPOtzX4veRqqxraDg5kZjivPTeyhDstOg==",
+  "dgSpecHash": "Ec+EamPTgMMheCrjeAcKkTFE8QkE8o5U75D71R7hzUEcYcrfR0LFHZbrGElVEODcIcqoM7YaG1x0mwekN0N+2g==",
   "success": true,
   "projectFilePath": "E:\\Ravn\\BootCamp\\Repository\\SwapiBlazor\\StarWarsAPI5\\StarWarsAPI5.csproj",
   "expectedPackageFiles": [
@@ -55,6 +55,7 @@
     "C:\\Users\\Crhistian\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\5.0.0\\microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
     "C:\\Users\\Crhistian\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
     "C:\\Users\\Crhistian\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\2.2.0\\microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Crhistian\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
     "C:\\Users\\Crhistian\\.nuget\\packages\\microsoft.extensions.identity.core\\5.0.4\\microsoft.extensions.identity.core.5.0.4.nupkg.sha512",
     "C:\\Users\\Crhistian\\.nuget\\packages\\microsoft.extensions.identity.stores\\5.0.4\\microsoft.extensions.identity.stores.5.0.4.nupkg.sha512",
     "C:\\Users\\Crhistian\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",

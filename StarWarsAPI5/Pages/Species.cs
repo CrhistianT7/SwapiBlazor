@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using StarWarsAPI5.Services;
 using StarWarsSearcher.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,24 +14,26 @@ namespace StarWarsAPI5.Pages
     {
         [Inject] HttpClient Http { get; set; }
         private IEnumerable<Specie> _Species { get; set; }
+        [Inject]
+        public ISpecieDataService SpecieDataService { get; set; }
         private int CurrentPage = 1;
-        private int TotalPageQuantity;
+        private int TotalPageQuantity = 4;
         public string NameFilter { get; set; } = "";
         protected override async Task OnInitializedAsync()
         {
-            await GetSpecies();
+            _Species = (await SpecieDataService.GetAllSpecies());
         }
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
-            await GetSpecies(page);
+            _Species = (await SpecieDataService.GetAllSpecies());
         }
-        private async void Clear()
+        private async Task Clear()
         {
-            NameFilter = "";
-            await GetSpecies();
+            NameFilter = string.Empty;
+            _Species = (await SpecieDataService.GetAllSpecies());
         }
-        async Task GetSpecies(int page = 1)
+        /*async Task GetSpecies(int page = 1)
         {
             try
             {
@@ -43,6 +46,6 @@ namespace StarWarsAPI5.Pages
                 //Handle Error
                 Console.WriteLine(ex.Message);
             }
-        }
+        }*/
     }
 }

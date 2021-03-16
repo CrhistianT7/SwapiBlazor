@@ -109,16 +109,13 @@ h3[b-sj1tnebb66] {
 }
 /* /Pages/People.razor.rz.scp.css */
 .button[b-qr2ntmcbhb] {
-    display: block;
-    width: 115px;
-    height: 25px;
-    background: #4E9CAF;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
     color: white;
-    font-weight: bold;
-    line-height: 25px;
+    border-radius: 5px;
+    text-align: center;
+    border-width: 1px;
+    border-color: yellow;
+    padding: 5px;
+    text-decoration: none;
 }
 /* /Shared/Footer.razor.rz.scp.css */
 .foo[b-0jf1iot2p7] {

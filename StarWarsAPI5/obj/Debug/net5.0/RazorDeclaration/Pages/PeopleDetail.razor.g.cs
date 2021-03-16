@@ -82,7 +82,7 @@ using StarWarsAPI5.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/people/{Name}/{currentPage}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/people/{Name}/{CurrentPage}")]
     public partial class PeopleDetail : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

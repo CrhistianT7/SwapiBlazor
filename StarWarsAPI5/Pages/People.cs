@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using StarWarsAPI5.Services;
 using StarWarsSearcher.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,42 +17,29 @@ namespace StarWarsAPI5.Pages
     {
         [Inject] HttpClient Http { get; set; }
         public IEnumerable<Character> _People { get; set; }
-        private int totalPageQuantity;
-        public int currentPage = 1;
-        private string nameFilter { get; set; } = "";
+        [Inject]
+        public IPeopleDataService PeopleDataService { get; set; }
+
+        private int TotalPageQuantity = 9;
+        public int CurrentPage = 1;
+        private string NameFilter { get; set; } = "";
         protected override async Task OnInitializedAsync()
         {
-            await GetPeople();
+            _People = (await PeopleDataService.GetAllPeople());
         }
-
         private async Task SelectedPage(int page)
         {
-            currentPage = page;
-            await GetPeople(page);
+            CurrentPage = page;
+            _People = (await PeopleDataService.GetAllPeople(page, NameFilter));
+        }
+        private async Task Filter()
+        { 
+            _People = (await PeopleDataService.GetAllPeople(1, NameFilter));
         }
         private async Task Clear()
         {
-            nameFilter = string.Empty;
-            await GetPeople();
+            NameFilter = string.Empty;
+            _People = (await PeopleDataService.GetAllPeople());
         }
-        async Task GetPeople( int page = 1)
-
-        {
-            var httpResponse = await Http.GetAsync($"people/?page={page}");
-            if (httpResponse.IsSuccessStatusCode)
-            {
-                var responseString = await httpResponse.Content.ReadAsStringAsync();
-                JObject responseJson = JObject.Parse(responseString);
-                totalPageQuantity = int.Parse(JsonConvert.SerializeObject(responseJson["count"]))/10 + 1;
-                responseString = JsonConvert.SerializeObject(responseJson["results"]);
-                _People = System.Text.Json.JsonSerializer.Deserialize<IEnumerable<Character>>(responseString, new JsonSerializerOptions() { PropertyNameCaseInsensitive = true});
-                _People = _People.Where(x => x.Name.Contains(nameFilter));
-            }
-            else
-            {
-                // error handle
-            }
-        }
-        
     }
 }
