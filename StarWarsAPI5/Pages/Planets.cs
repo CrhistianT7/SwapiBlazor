@@ -12,7 +12,6 @@ namespace StarWarsAPI5.Pages
 {
     public partial class Planets
     {
-        [Inject] HttpClient Http { get; set; }
         private IEnumerable<Planet> _Planets { get; set; }
         [Inject]
         public IPlanetDataService PlanetDataService { get; set; }
@@ -26,37 +25,16 @@ namespace StarWarsAPI5.Pages
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
-            _Planets = (await PlanetDataService.GetAllPlanets());
+            _Planets = (await PlanetDataService.GetAllPlanets(page, NameFilter));
+        }
+        private async Task Filter()
+        {
+            _Planets = (await PlanetDataService.GetAllPlanets(CurrentPage, NameFilter));
         }
         private async Task Clear()
         {
             NameFilter = string.Empty;
-            _Planets = (await PlanetDataService.GetAllPlanets());
+            _Planets = (await PlanetDataService.GetAllPlanets(CurrentPage, NameFilter));
         }
-        /*private async Task SelectedPage(int page)
-        {
-            CurrentPage = page;
-            await GetPlanets(page);
-        }
-        private async void Clear()
-        {
-            NameFilter = "";
-            await GetPlanets();
-        }
-        async Task GetPlanets(int page = 1)
-        {
-            try
-            {
-                var response = await Http.GetFromJsonAsync<SwapiListResponse<Planet>>(Http.BaseAddress.ToString() + $"planets/?page={page}");
-                TotalPageQuantity = response.Count / 10 + 1;
-                _Planets = response.Results.Where(film => film.Name.Contains(NameFilter));
-
-            }
-            catch (Exception ex)
-            {
-                //Handle Error
-                Console.WriteLine(ex.Message);
-            }
-        }*/
     }
 }

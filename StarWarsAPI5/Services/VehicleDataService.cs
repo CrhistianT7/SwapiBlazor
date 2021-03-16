@@ -19,9 +19,21 @@ namespace StarWarsAPI5.Services
         {
             try
             {
-
                 var response = await _Http.GetFromJsonAsync<SwapiListResponse<Vehicle>>(_Http.BaseAddress.ToString() + $"vehicles/?page={page}");
                 return response.Results.Where(ch => ch.Name.Contains(NameFilter));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+        public async Task<Vehicle> GetVehicleByName(string currentPage, string name)
+        {
+            try
+            {
+                var response = await _Http.GetFromJsonAsync<SwapiListResponse<Vehicle>>(_Http.BaseAddress.ToString() + $"vehicles/?page={int.Parse(currentPage)}");
+                return response.Results.FirstOrDefault(ch => ch.Name == name);
             }
             catch (Exception ex)
             {

@@ -82,6 +82,13 @@ using StarWarsAPI5.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\Pages\Species.razor"
+using StarWarsAPI5.Components;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/species")]
     public partial class Species : Microsoft.AspNetCore.Components.ComponentBase
     {

@@ -23,8 +23,8 @@ namespace StarWarsSearcher.Entities
         public string AverageLifespan { get; set; }
         public string Homeworld { get; set; }
         public string Language { get; set; }
-        public string[] People { get; set; }
-        public string[] Films { get; set; }
+        public List<string> People { get; set; }
+        public List<string> Films { get; set; }
         public string Created { get; set; }
         public string Edited { get; set; }
         public string Url { get; set; }

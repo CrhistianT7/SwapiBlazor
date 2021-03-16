@@ -82,6 +82,13 @@ using StarWarsAPI5.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\Pages\Starships.razor"
+using StarWarsAPI5.Components;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/starships")]
     public partial class Starships : Microsoft.AspNetCore.Components.ComponentBase
     {

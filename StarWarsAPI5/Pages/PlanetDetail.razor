@@ -1,6 +1,18 @@
 ﻿@page "/planets/{Name}/{CurrentPage}"
 
 <div>
-    <h3>@Planet.Name</h3>
-    <div>@Planet.Grabity</div>
+    <h3 style="color: yellow;">@Planet.Name</h3>
+    <div style="color: white;"><span style="color: yellow;"> Climate: </span> @Planet.Climate</div>
+    <div style="color: yellow;">
+        <span> Residents:</span>
+        @if (@Planet.Residents != null)
+        {
+            @foreach (var resident in @Planet.Residents)
+            {
+                <div>
+                    <a href="@resident" target="_blank" style="color: white;">@resident</a>
+                </div>
+            }
+        }
+    </div>
 </div>

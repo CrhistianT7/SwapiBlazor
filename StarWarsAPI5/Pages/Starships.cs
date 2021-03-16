@@ -12,7 +12,6 @@ namespace StarWarsAPI5.Pages
 {
     public partial class Starships
     {
-        [Inject] HttpClient Http { get; set; }
         private IEnumerable<Starship> _Starships { get; set; }
         [Inject]
         public IStarshipDataService StarshipDataService { get; set; }
@@ -26,26 +25,16 @@ namespace StarWarsAPI5.Pages
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
-            _Starships = (await StarshipDataService.GetAllStarships());
+            _Starships = (await StarshipDataService.GetAllStarships(page, NameFilter));
         }
-        private async void Clear()
+        private async Task Filter()
+        {
+            _Starships = (await StarshipDataService.GetAllStarships(CurrentPage, NameFilter));
+        }
+        private async Task Clear()
         {
             NameFilter = "";
-            _Starships = (await StarshipDataService.GetAllStarships());
+            _Starships = (await StarshipDataService.GetAllStarships(CurrentPage, NameFilter));
         }
-        /*async Task GetStarships(int page = 1)
-        {
-            try
-            {
-                var response = await Http.GetFromJsonAsync<SwapiListResponse<Starship>>(Http.BaseAddress.ToString() + $"starships/?page={page}");
-                TotalPageQuantity = response.Count / 10 + 1;
-                _Starships = response.Results.Where(ss => ss.Name.Contains(NameFilter));
-            }
-            catch (Exception ex)
-            {
-                //Handle Error
-                Console.WriteLine(ex.Message);
-            }
-        }*/
     }
 }

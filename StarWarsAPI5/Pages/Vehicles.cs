@@ -26,26 +26,16 @@ namespace StarWarsAPI5.Pages
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
-            _Vehicles = await VehicleDataService.GetAllVehicles();
+            _Vehicles = await VehicleDataService.GetAllVehicles(page, NameFilter);
         }
-        private async void Clear()
+        private async Task Filter()
+        {
+            _Vehicles = await VehicleDataService.GetAllVehicles(CurrentPage, NameFilter);
+        }
+        private async Task Clear()
         {
             NameFilter = "";
-            _Vehicles = await VehicleDataService.GetAllVehicles();
+            _Vehicles = await VehicleDataService.GetAllVehicles(CurrentPage, NameFilter);
         }
-        /*async Task GetVehicles(int page = 1)
-        {
-            try
-            {
-                var response = await Http.GetFromJsonAsync<SwapiListResponse<Vehicle>>(Http.BaseAddress.ToString() + $"vehicles/?page={page}");
-                TotalPageQuantity = response.Count / 10 + 1;
-                _Vehicles = response.Results.Where(vh => vh.Name.Contains(NameFilter));
-            }
-            catch (Exception ex)
-            {
-                //Handle Error
-                Console.WriteLine(ex.Message);
-            }
-        }*/
     }
 }

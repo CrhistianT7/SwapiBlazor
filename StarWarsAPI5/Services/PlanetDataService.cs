@@ -30,20 +30,18 @@ namespace StarWarsAPI5.Services
             }
         }
 
-        /*public async Task<Character> GetCharacterByName(string Name = "Luke Skywalker")
+        public async Task<Planet> GetPlanetByName(string currentPage, string name)
         {
             try
             {
-                var response = await _Http.GetFromJsonAsync<SwapiListResponse<Character>>(_Http.BaseAddress.ToString() + $"people/?page={1}"); 
-                return response.Results.FirstOrDefault(character => character.Name == Name);
-
-            }
+                var response = await _Http.GetFromJsonAsync<SwapiListResponse<Planet>>(_Http.BaseAddress.ToString() + $"planets/?page={int.Parse(currentPage)}");
+                return response.Results.FirstOrDefault(ch => ch.Name == name);
+            } 
             catch (Exception ex)
             {
-                //Handle Error
                 Console.WriteLine(ex.Message);
                 return null;
             }
-        }*/
+        }
     }
 }

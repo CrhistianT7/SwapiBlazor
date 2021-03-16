@@ -12,7 +12,6 @@ namespace StarWarsAPI5.Pages
 {
     public partial class Films
     {
-        [Inject] HttpClient Http { get; set; }
         public IEnumerable<Film> _Films { get; set; }
         [Inject]
         public IFilmDataService FilmDataService { get; set; }
@@ -24,44 +23,19 @@ namespace StarWarsAPI5.Pages
         {
             _Films = (await FilmDataService.GetAllFilms());
         }
-
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
-            _Films = (await FilmDataService.GetAllFilms());
+            _Films = (await FilmDataService.GetAllFilms(page, NameFilter));
+        }
+        private async Task Filter()
+        {
+            _Films = (await FilmDataService.GetAllFilms(CurrentPage, NameFilter));
         }
         private async Task Clear()
         {
             NameFilter = string.Empty;
-            _Films = (await FilmDataService.GetAllFilms());
+            _Films = (await FilmDataService.GetAllFilms(CurrentPage, NameFilter));
         }
-
-        /*protected override async Task OnInitializedAsync()
-        {
-            await GetFilms();
-        }
-        private async Task SelectedPage(int page)
-        {
-            CurrentPage = page;
-            await GetFilms(page);
-        }
-        private async Task Clear()
-        {
-            NameFilter = string.Empty;
-            await GetFilms();
-        }
-        async Task GetFilms(int page = 1)
-        {
-            try
-            {
-                var response = await Http.GetFromJsonAsync<SwapiListResponse<Film>>(Http.BaseAddress.ToString() + $"films/?page={page}");
-                TotalPageQuantity = response.Count / 10 + 1;
-                _Films = response.Results.Where(film => film.Title.Contains(NameFilter));
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }*/
     }
 }

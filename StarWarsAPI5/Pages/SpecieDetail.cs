@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using StarWarsAPI5.Services;
 using StarWarsSearcher.Entities;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace StarWarsAPI5.Pages
 {
     public partial class SpecieDetail
     {
-        [Inject] HttpClient Http { get; set; }
+        [Inject] ISpecieDataService SpecieDataService { get; set; }
         [Parameter]
         public string Name { get; set; }
         [Parameter]
@@ -19,22 +20,7 @@ namespace StarWarsAPI5.Pages
         public Specie Specie { get; set; } = new Specie();
         protected override async Task OnInitializedAsync()
         {
-            await GetSpecie();
-        }
-
-        async Task GetSpecie()
-        {
-            try
-            {
-                var response = await Http.GetFromJsonAsync<SwapiListResponse<Specie>>(Http.BaseAddress.ToString() + $"species/?page={int.Parse(CurrentPage)}");
-                Specie = response.Results.FirstOrDefault(specie => specie.Name == Name);
-
-            }
-            catch (Exception ex)
-            {
-                //Handle Error
-                Console.WriteLine(ex.Message);
-            }
+            Specie = await SpecieDataService.GetSpecieByName(CurrentPage, Name);
         }
     }
 }

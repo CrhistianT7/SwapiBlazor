@@ -9,5 +9,6 @@ namespace StarWarsAPI5.Services
     public interface IStarshipDataService
     {
         Task<IEnumerable<Starship>> GetAllStarships(int page = 1, string NameFilter = "");
+        Task<Starship> GetStarshipByName(string currentPage, string name);
     }
 }

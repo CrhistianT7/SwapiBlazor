@@ -82,6 +82,13 @@ using StarWarsAPI5.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\Pages\Planets.razor"
+using StarWarsAPI5.Components;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/planets")]
     public partial class Planets : Microsoft.AspNetCore.Components.ComponentBase
     {

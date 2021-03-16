@@ -12,7 +12,6 @@ namespace StarWarsAPI5.Pages
 {
     public partial class Species
     {
-        [Inject] HttpClient Http { get; set; }
         private IEnumerable<Specie> _Species { get; set; }
         [Inject]
         public ISpecieDataService SpecieDataService { get; set; }
@@ -26,26 +25,16 @@ namespace StarWarsAPI5.Pages
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
-            _Species = (await SpecieDataService.GetAllSpecies());
+            _Species = (await SpecieDataService.GetAllSpecies(page, NameFilter));
+        }
+        private async Task Filter()
+        {
+            _Species = (await SpecieDataService.GetAllSpecies(CurrentPage, NameFilter));
         }
         private async Task Clear()
         {
             NameFilter = string.Empty;
-            _Species = (await SpecieDataService.GetAllSpecies());
+            _Species = (await SpecieDataService.GetAllSpecies(CurrentPage, NameFilter));
         }
-        /*async Task GetSpecies(int page = 1)
-        {
-            try
-            {
-                var response = await Http.GetFromJsonAsync<SwapiListResponse<Specie>>(Http.BaseAddress.ToString() + $"species/?page={page}");
-                TotalPageQuantity = response.Count / 10 + 1;
-                _Species = response.Results.Where(sp => sp.Name.Contains(NameFilter));
-            }
-            catch (Exception ex)
-            {
-                //Handle Error
-                Console.WriteLine(ex.Message);
-            }
-        }*/
     }
 }

@@ -29,6 +29,19 @@ namespace StarWarsAPI5.Services
                 return null;
             }
         }
+        public async Task<Film> GetFilmByTitle(string currentPage, string title)
+        {
+            try
+            {
 
+                var response = await _Http.GetFromJsonAsync<SwapiListResponse<Film>>(_Http.BaseAddress.ToString() + $"films/?page={int.Parse(currentPage)}");
+                return response.Results.FirstOrDefault(ch => ch.Title == title);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
     }
 }

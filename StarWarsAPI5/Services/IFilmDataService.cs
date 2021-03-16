@@ -9,5 +9,6 @@ namespace StarWarsAPI5.Services
     public interface IFilmDataService
     {
         Task<IEnumerable<Film>> GetAllFilms(int page = 1, string NameFilter = "");
+        Task<Film> GetFilmByTitle(string currentPage, string title);
     }
 }

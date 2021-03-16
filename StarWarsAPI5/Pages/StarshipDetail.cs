@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using StarWarsAPI5.Services;
 using StarWarsSearcher.Entities;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,8 @@ namespace StarWarsAPI5.Pages
 {
     public partial class StarshipDetail
     {
-        [Inject] HttpClient Http { get; set; }
+        [Inject]
+        public IStarshipDataService StarshipDataService { get; set; }
         [Parameter]
         public string Name { get; set; }
         [Parameter]
@@ -19,22 +21,7 @@ namespace StarWarsAPI5.Pages
         public Starship Starship { get; set; } = new Starship();
         protected override async Task OnInitializedAsync()
         {
-            await GetStarship();
-        }
-
-        async Task GetStarship()
-        {
-            try
-            {
-                var response = await Http.GetFromJsonAsync<SwapiListResponse<Starship>>(Http.BaseAddress.ToString() + $"starships/?page={int.Parse(CurrentPage)}");
-                Starship = response.Results.FirstOrDefault(starship => starship.Name == Name);
-
-            }
-            catch (Exception ex)
-            {
-                //Handle Error
-                Console.WriteLine(ex.Message);
-            }
+            Starship = await StarshipDataService.GetStarshipByName(CurrentPage, Name);
         }
     }
 }
