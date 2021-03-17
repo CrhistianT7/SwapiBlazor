@@ -14,12 +14,12 @@
 
 <Pagination TotalPagesQuantity="TotalPageQuantity" CurrentPage="CurrentPage" Radius="2" SelectedPage="SelectedPage" />
 
-<div style="display: flex;">
+<div class="flex-container">
     @if (_Vehicles != null)
     {
         @foreach (var vehicle in _Vehicles)
         {
-            <div style="margin: 10px">
+            <div class="information-box">
                 <div style="color: white;"><span style="color: yellow;"> Name:</span> @vehicle.Name</div>
                 <div style="color: white;"><span style="color: yellow;"> Model:</span> @vehicle.Model</div>
                 <div style="color: white;"><span style="color: yellow;"> Length:</span> @vehicle.Length</div>

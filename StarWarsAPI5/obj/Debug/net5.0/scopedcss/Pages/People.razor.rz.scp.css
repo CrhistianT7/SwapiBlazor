@@ -1,9 +1,4 @@
-.button[b-qr2ntmcbhb] {
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    border-width: 1px;
-    border-color: yellow;
-    padding: 5px;
-    text-decoration: none;
+.information-box[b-qr2ntmcbhb] {
+    width: 200px;
+    margin: 10px;
 }

@@ -1,20 +1,27 @@
 ﻿@page "/people/{Name}/{CurrentPage}"
 
-<div>
-    <div><span style="color: yellow;">Name:</span><span style="color: white;"> @Character.Name</span></div>
-    <div><span style="color: yellow;">Birth Year:</span><span style="color: white;"> @Character.BirthYear</span></div>
-    <div>
-        <span style="color: yellow;">Films:</span>
-        <div style="color: white;">
-            @if(@Character.Films != null)
-            {
-                @foreach(var film in @Character.Films)
+@if (@Character != null)
+{
+    <div class="flex-container">
+        <div><span style="color: yellow;">Name:</span><span style="color: white;"> @Character.Name</span></div>
+        <div><span style="color: yellow;">Birth Year:</span><span style="color: white;"> @Character.BirthYear</span></div>
+        <div>
+            <span style="color: yellow;">Films:</span>
+            <div style="color: white;">
+                @if (@Character.Films != null)
                 {
-                <div>
-                    <a href="@film" target="_blank" style="color: white;">@film</a>
-                </div>
+                    @foreach (var film in @Character.Films)
+                    {
+                        <div>
+                            <a href="@film" target="_blank" style="color: white;">@film</a>
+                        </div>
+                    }
                 }
-            }
+            </div>
         </div>
     </div>
-</div>
+}
+else
+{ 
+    <StarWarsAPI5.Components.Loading/>
+}

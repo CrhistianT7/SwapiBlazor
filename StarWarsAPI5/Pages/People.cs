@@ -21,7 +21,7 @@ namespace StarWarsAPI5.Pages
 
         private int TotalPageQuantity = 9;
         public int CurrentPage = 1;
-        private string NameFilter { get; set; } = "";
+        public string NameFilter { get; set; } = "";
         protected override async Task OnInitializedAsync()
         {
             _People = (await PeopleDataService.GetAllPeople());
@@ -32,7 +32,7 @@ namespace StarWarsAPI5.Pages
             _People = (await PeopleDataService.GetAllPeople(page, NameFilter));
         }
         private async Task Filter()
-        { 
+        {
             _People = (await PeopleDataService.GetAllPeople(CurrentPage, NameFilter));
         }
         private async Task Clear()

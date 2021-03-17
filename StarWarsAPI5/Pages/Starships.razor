@@ -14,12 +14,12 @@
 
 <Pagination TotalPagesQuantity="TotalPageQuantity" CurrentPage="CurrentPage" Radius="2" SelectedPage="SelectedPage" />
 
-<div style="display: flex;">
+<div class="flex-container">
     @if (_Starships != null)
     {
         @foreach (var starship in _Starships)
         {
-    <div style="margin: 10px;">
+    <div class="information-box">
         <div style="color: white;"><span style="color: yellow;">Name: </span> @starship.Name</div>
         <div style="color: white;"><span style="color: yellow;">Model: </span> @starship.Model</div>
         <div style="color: white;"><span style="color: yellow;">Mength: </span> @starship.Length</div>

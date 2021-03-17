@@ -1,4 +1,8 @@
 a[b-kujj946lt4] {
     color: white;
-    background-color: red;
+    background-color: black;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 3px;
 }

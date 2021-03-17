@@ -14,12 +14,12 @@
 
 <Pagination TotalPagesQuantity="TotalPageQuantity" CurrentPage="CurrentPage" Radius="2" SelectedPage="SelectedPage" />
 
-<div style="display: flex;">
+<div class="flex-container">
     @if (_Planets != null)
     {
         @foreach (var planet in _Planets)
         {
-        <div style="margin:10px">
+        <div class="information-box">
             <div style="color: white;"><span style="color: yellow;">Name: </span> @planet.Name</div>
             <div style="color: white;"><span style="color: yellow;">Rotation Period: </span> @planet.RotationPeriod</div>
             <div style="color: white;"><span style="color: yellow;">Gravity: </span> @planet.Gravity</div>

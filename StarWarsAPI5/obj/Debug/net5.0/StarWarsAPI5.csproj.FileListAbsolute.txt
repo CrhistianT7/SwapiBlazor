@@ -1658,8 +1658,6 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAP
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.RazorComponent.input.cache
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Components\MoreInformation.razor.g.cs
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Pages\FilmDetail.razor.g.cs
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Pages\Films.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Pages\PeopleDetail.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Pages\PlanetDetail.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Pages\Planets.razor.g.cs
@@ -1675,7 +1673,6 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDecla
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Components\Loading.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Pages\People.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Shared\Footer.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Shared\Header.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
@@ -1687,8 +1684,6 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAP
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.RazorCoreGenerate.cache
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\App.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Components\MoreInformation.razor.g.cs
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Pages\FilmDetail.razor.g.cs
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Pages\Films.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Pages\PeopleDetail.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Pages\PlanetDetail.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Pages\Planets.razor.g.cs
@@ -1704,7 +1699,6 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Shar
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Components\Loading.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Pages\People.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Shared\Footer.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Shared\Header.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
@@ -2466,7 +2460,6 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\staticweba
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\staticwebassets\StarWarsAPI5.StaticWebAssets.xml
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Components\Loading.razor.rz.scp.css
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Pages\Index.razor.rz.scp.css
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Pages\People.razor.rz.scp.css
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Shared\Footer.razor.rz.scp.css
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Shared\Header.razor.rz.scp.css
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
@@ -2479,3 +2472,12 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAP
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\ref\StarWarsAPI5.dll
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.pdb
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Components\MoreInformation.razor.rz.scp.css
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Pages\Films\Films.razor.g.cs
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Pages\Films\Films.razor.g.cs
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Pages\People.razor.g.cs
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Pages\People.razor.g.cs
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Pages\People.razor.rz.scp.css
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Shared\Searcher.razor.g.cs
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Shared\Searcher.razor.g.cs
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Pages\Films\FilmDetail.razor.g.cs
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Pages\Films\FilmDetail.razor.g.cs

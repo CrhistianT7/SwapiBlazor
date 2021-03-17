@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
-namespace StarWarsAPI5.Pages
+namespace StarWarsAPI5.Pages.Films
 {
     public partial class FilmDetail
     {

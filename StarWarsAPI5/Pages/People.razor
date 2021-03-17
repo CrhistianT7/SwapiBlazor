@@ -13,22 +13,23 @@
     <button type="button" class="btn btn-danger mb-2" @onclick="Clear"> Clear</button>
 </div>
 
+@*<Searcher NameFilter="NameFilter" Filter="Filter" Clear="Clear" />*@
 <Pagination TotalPagesQuantity="TotalPageQuantity" CurrentPage="CurrentPage" Radius="2" SelectedPage="SelectedPage" />
 
-<div style="display: flex;">
+<div class="flex-container">
         @if (_People != null)
         {
             @foreach (var character in _People)
             {
-                <div style="margin: 10px">
+                <div class="information-box">
                     <div><span style="color: yellow;">Name:</span><span style="color: white;"> @character.Name</span></div>
                     <div><span style="color: yellow;">Height:</span> <span style="color: white;"> @character.Height</span></div>
                     <div><span style="color: yellow;">Mass:</span> <span style="color: white;"> @character.Mass</span></div>
                     <div><span style="color: yellow;">Skin Color:</span> <span style="color: white;"> @character.SkinColor</span></div>
                     <div><span style="color: yellow;">Gender:</span> <span style="color: white;"> @character.Gender</span></div>
-                    <MoreInformation reference="@($"people/{character.Name}/{@CurrentPage}")"> More Information </MoreInformation>
+                    <MoreInformation reference="@($"people/{character.Name}/{@CurrentPage}")">  More Information </MoreInformation>
                 </div>
-                        }
+            }
         }
         else
         {

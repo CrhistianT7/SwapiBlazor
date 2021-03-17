@@ -14,12 +14,12 @@
 
 <Pagination TotalPagesQuantity="TotalPageQuantity" CurrentPage="CurrentPage" Radius="2" SelectedPage="SelectedPage" />
 
-<div style="display: flex;">
+<div class="flex-container">
     @if (_Films != null)
     {
         @foreach (var film in @_Films)
         {
-            <div style="margin: 10px;">
+            <div class="information-box">
                 <div style="color: white;"><span style="color: yellow;"> Title: </span> @film.Title</div>
                 <div style="color: white;"><span style="color: yellow;"> Director: </span> @film.Director</div>
                 <div style="color: white;"><span style="color: yellow;"> Producer: </span> @film.Producer</div>
@@ -30,8 +30,6 @@
     }
     else
     {
-        <div>
-            Loading ...
-        </div>
+        <Loading/>
     }
 </div>

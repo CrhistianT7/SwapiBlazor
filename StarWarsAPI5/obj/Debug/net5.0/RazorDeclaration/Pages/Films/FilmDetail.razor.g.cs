@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace StarWarsAPI5.Pages
+namespace StarWarsAPI5.Pages.Films
 {
     #line hidden
     using System;
@@ -82,15 +82,8 @@ using StarWarsAPI5.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\Pages\Films.razor"
-using StarWarsAPI5.Components;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/films")]
-    public partial class Films : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/films/{Title}/{CurrentPage}")]
+    public partial class FilmDetail : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)

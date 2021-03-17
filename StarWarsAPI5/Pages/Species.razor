@@ -14,12 +14,12 @@
 
 <Pagination TotalPagesQuantity="TotalPageQuantity" CurrentPage="CurrentPage" Radius="2" SelectedPage="SelectedPage" />
 
-<div style="display: flex">
+<div class="flex-container">
     @if (_Species != null)
     {
         @foreach (var specie in _Species)
         {
-            <div style="margin: 10px:">
+            <div class="information-box">
                 <div style="color: white;"><span style="color: yellow;"> Name: </span> @specie.Name</div>
                 <div style="color: white;"><span style="color: yellow;"> Classification: </span> @specie.Classification</div>
                 <div style="color: white;"><span style="color: yellow;"> Skin Colors: </span> @specie.SkinColors</div>
