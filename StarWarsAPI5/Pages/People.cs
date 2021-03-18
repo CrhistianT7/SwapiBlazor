@@ -31,9 +31,11 @@ namespace StarWarsAPI5.Pages
             CurrentPage = page;
             _People = (await PeopleDataService.GetAllPeople(page, NameFilter));
         }
-        private async Task Filter()
+        private async Task Filter(string  newValue)
         {
-            _People = (await PeopleDataService.GetAllPeople(CurrentPage, NameFilter));
+            NameFilter = newValue;
+            CurrentPage = 1;
+            _People = await PeopleDataService.GetAllPeople(CurrentPage, NameFilter);
         }
         private async Task Clear()
         {

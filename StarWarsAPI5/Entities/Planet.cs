@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StarWarsAPI5.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StarWarsSearcher.Entities
 {
-    public class Planet
+    public class Planet: ISearchableEntity
     {
         public string Name { get; set; }
         [JsonPropertyName("rotation_period")]
@@ -26,5 +27,6 @@ namespace StarWarsSearcher.Entities
         public string Edited { get; set; }
         public string Url { get; set; }
 
+        public string Title => Name;
     }
 }

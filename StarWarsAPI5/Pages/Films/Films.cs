@@ -30,12 +30,26 @@ namespace StarWarsAPI5.Pages.Films
         }
         private async Task Filter()
         {
-            _Films = (await FilmDataService.GetAllFilms(CurrentPage, NameFilter));
+            await LoadData();
         }
         private async Task Clear()
         {
             NameFilter = string.Empty;
-            _Films = (await FilmDataService.GetAllFilms(CurrentPage, NameFilter));
+            await LoadData();
+        }
+
+
+        private async Task LoadData()
+        {
+            _Films = await FilmDataService.GetAllFilms(CurrentPage, NameFilter);
+        }
+
+
+        public async Task OnTextChange(string newValue)
+        {
+            NameFilter = newValue;
+            CurrentPage = 1;
+            await LoadData();
         }
     }
 }

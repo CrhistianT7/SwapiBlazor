@@ -8,40 +8,20 @@ using System.Threading.Tasks;
 
 namespace StarWarsAPI5.Services
 {
-    public class FilmDataService : IFilmDataService
+    public class FilmDataService : BaseSwapiService<Film>, IFilmDataService
     {
-        private readonly HttpClient _Http;
-        public FilmDataService(HttpClient Http)
+      
+        public FilmDataService(HttpClient Http): base(Http)
         {
-            _Http = Http;
+         
         }
-        public async Task<IEnumerable<Film>> GetAllFilms(int page = 1, string NameFilter = "")
+        public  Task<IEnumerable<Film>> GetAllFilms(int page = 1, string NameFilter = "")
         {
-            try
-            {
-
-                var response = await _Http.GetFromJsonAsync<SwapiListResponse<Film>>(_Http.BaseAddress.ToString() + $"films/?page={page}");
-                return response.Results.Where(ch => ch.Title.Contains(NameFilter));
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return null;
-            }
+            return GetAllEntities("films", page, NameFilter);
         }
-        public async Task<Film> GetFilmByTitle(string currentPage, string title)
+        public Task<Film> GetFilmByTitle(string currentPage, string title)
         {
-            try
-            {
-
-                var response = await _Http.GetFromJsonAsync<SwapiListResponse<Film>>(_Http.BaseAddress.ToString() + $"films/?page={int.Parse(currentPage)}");
-                return response.Results.FirstOrDefault(ch => ch.Title == title);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return null;
-            }
+            return GetEnitityByTitle("films",currentPage, title);
         }
     }
 }

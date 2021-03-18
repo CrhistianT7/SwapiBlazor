@@ -15,13 +15,13 @@ namespace StarWarsAPI5.Services
         {
             _Http = Http;
         }
-        public async Task<IEnumerable<Character>> GetAllPeople(int page = 1, string NameFilter = "")
+        public async Task<IEnumerable<Character>> GetAllPeople(int page = 1, string nameFilter = "")
         {
             try
             {
 
-                var response = await _Http.GetFromJsonAsync<SwapiListResponse<Character>>(_Http.BaseAddress.ToString() + $"people/?page={page}");
-                return response.Results.Where(ch => ch.Name.Contains(NameFilter));
+                var response = await _Http.GetFromJsonAsync<SwapiListResponse<Character>>(_Http.BaseAddress.ToString() + $"people/?search={nameFilter}&page={page}");
+                return response.Results;
             }
             catch (Exception ex)
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StarWarsAPI5.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StarWarsSearcher.Entities
 {
-    public class Film
+    public class Film: ISearchableEntity
     {
         public string Title { get; set; }
         [JsonPropertyName("episode_id")]

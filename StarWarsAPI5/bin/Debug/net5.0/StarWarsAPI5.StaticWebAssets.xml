@@ -1,4 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="/" Path="E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\bin\Debug\net5.0\wwwroot\" />
-  <ContentRoot BasePath="/" Path="E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="/" Path="E:\Ravn\ravn-challenges\Christian\StarWarsAPI5\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="E:\Ravn\ravn-challenges\Christian\StarWarsAPI5\obj\Debug\net5.0\scopedcss\bundle\" />
 </StaticWebAssets>
