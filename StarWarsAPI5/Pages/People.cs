@@ -24,21 +24,25 @@ namespace StarWarsAPI5.Pages
         public string NameFilter { get; set; } = "";
         protected override async Task OnInitializedAsync()
         {
-            _People = (await PeopleDataService.GetAllPeople());
+            _People = await PeopleDataService.GetAllPeople();
         }
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
-            _People = (await PeopleDataService.GetAllPeople(page, NameFilter));
+            _People = await PeopleDataService.GetAllPeople(page, NameFilter);
         }
         private async Task Filter()
         {
-            _People = (await PeopleDataService.GetAllPeople(CurrentPage, NameFilter));
+            _People = await PeopleDataService.GetAllPeople(CurrentPage, NameFilter);
+        }
+        private async Task OnInput()
+        {
+            _People = await PeopleDataService.GetAllPeople(CurrentPage, NameFilter);
         }
         private async Task Clear()
         {
             NameFilter = string.Empty;
-            _People = (await PeopleDataService.GetAllPeople(CurrentPage, NameFilter));
+            _People = await PeopleDataService.GetAllPeople(CurrentPage, NameFilter);
         }
     }
 }
