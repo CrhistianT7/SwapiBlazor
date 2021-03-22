@@ -13,29 +13,36 @@ namespace StarWarsAPI5.Pages.Films
     public partial class Films
     {
         public IEnumerable<Film> _Films { get; set; }
-        [Inject]
-        public IFilmDataService FilmDataService { get; set; }
+        [Inject] 
+        public IDataService<Film> DataService { get; set; }
         public int CurrentPage = 1;
         public int TotalPageQuantity = 1;
         public string NameFilter { get; set; } = "";
 
         protected override async Task OnInitializedAsync()
         {
-            _Films = (await FilmDataService.GetAllFilms());
+            var response = await DataService.GetAllData("films", CurrentPage, NameFilter);
+            TotalPageQuantity = response.Count / 10 + 1;
+            _Films = response.Results;
         }
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
-            _Films = (await FilmDataService.GetAllFilms(page, NameFilter));
+            await LoadData();
         }
         private async Task Filter()
         {
-            _Films = (await FilmDataService.GetAllFilms(CurrentPage, NameFilter));
+            await LoadData();
         }
         private async Task Clear()
         {
             NameFilter = string.Empty;
-            _Films = (await FilmDataService.GetAllFilms(CurrentPage, NameFilter));
+            await LoadData();
+        }
+        private async Task LoadData()
+        {
+            var response = await DataService.GetAllData("films", CurrentPage, NameFilter);
+            _Films = response.Results;
         }
     }
 }

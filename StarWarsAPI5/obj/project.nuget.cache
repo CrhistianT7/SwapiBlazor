@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ec+EamPTgMMheCrjeAcKkTFE8QkE8o5U75D71R7hzUEcYcrfR0LFHZbrGElVEODcIcqoM7YaG1x0mwekN0N+2g==",
+  "dgSpecHash": "MenccJkOqg5sQxfFp+Ggl59QaYCWUhbNeSujAgQXJQ8f2FLvn0OxiEJlUp4JKZmDAbFMEodemjyeLPDZlEP4hQ==",
   "success": true,
   "projectFilePath": "E:\\Ravn\\BootCamp\\Repository\\SwapiBlazor\\StarWarsAPI5\\StarWarsAPI5.csproj",
   "expectedPackageFiles": [
@@ -105,6 +105,7 @@
     "C:\\Users\\Crhistian\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
     "C:\\Users\\Crhistian\\.nuget\\packages\\system.objectmodel\\4.0.12\\system.objectmodel.4.0.12.nupkg.sha512",
     "C:\\Users\\Crhistian\\.nuget\\packages\\system.private.uri\\4.0.1\\system.private.uri.4.0.1.nupkg.sha512",
+    "C:\\Users\\Crhistian\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
     "C:\\Users\\Crhistian\\.nuget\\packages\\system.reflection\\4.1.0\\system.reflection.4.1.0.nupkg.sha512",
     "C:\\Users\\Crhistian\\.nuget\\packages\\system.reflection.emit\\4.0.1\\system.reflection.emit.4.0.1.nupkg.sha512",
     "C:\\Users\\Crhistian\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.0.1\\system.reflection.emit.ilgeneration.4.0.1.nupkg.sha512",

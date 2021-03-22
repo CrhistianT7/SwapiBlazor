@@ -1,0 +1,25 @@
+﻿@page "/species"
+
+@using StarWarsAPI5.Components
+
+<Searcher OnClear="@Clear" OnTextChange="@OnInput"></Searcher>
+<Pagination TotalPagesQuantity="TotalPageQuantity" CurrentPage="CurrentPage" Radius="2" SelectedPage="SelectedPage" />
+
+<div class="flex-container">
+    @if (_Species != null)
+    {
+        @foreach (var specie in _Species)
+        {
+            <div class="information-box">
+                <div style="color: white;"><span style="color: yellow;"> Name: </span> @specie.Name</div>
+                <div style="color: white;"><span style="color: yellow;"> Classification: </span> @specie.Classification</div>
+                <div style="color: white;"><span style="color: yellow;"> Skin Colors: </span> @specie.SkinColors</div>
+                <MoreInformation reference="@($"species/{@specie.Name}/{CurrentPage}")"> More Information </MoreInformation>
+            </div>
+        }
+    }
+    else
+    {
+        <Loading />
+    }
+</div>

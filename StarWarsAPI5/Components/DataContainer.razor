@@ -1,0 +1,13 @@
+﻿<div class="flex-container">
+    @foreach (var character in Entity)
+    {
+        <div class="information-box">
+            <div><span style="color: yellow;">Name:</span><span style="color: white;"> @character.Name</span></div>
+            <div><span style="color: yellow;">Height:</span> <span style="color: white;"> @character.Height </span></div>
+            <div><span style="color: yellow;">Mass:</span> <span style="color: white;"> @character.Mass</span></div>
+            <div><span style="color: yellow;">Skin Color:</span> <span style="color: white;"> @character.SkinColor</span></div>
+            <div><span style="color: yellow;">Gender:</span> <span style="color: white;"> @character.Gender</span></div>
+            <MoreInformation reference="@($"people/{@character.Name}/{CurrentPage}")">  More Information </MoreInformation>
+        </div>
+    }
+</div>

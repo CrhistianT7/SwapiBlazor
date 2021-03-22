@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using StarWarsAPI5.Services;
+using StarWarsSearcher.Entities;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -26,6 +27,13 @@ namespace StarWarsAPI5
             builder.Services.AddHttpClient<ISpecieDataService, SpecieDataService>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
             builder.Services.AddHttpClient<IStarshipDataService, StarshipDataService>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
             builder.Services.AddHttpClient<IVehicleDataService, VehicleDataService>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
+            builder.Services.AddHttpClient<IDataService<Character>, DataService<Character>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
+            builder.Services.AddHttpClient<IDataService<Film>, DataService<Film>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
+            builder.Services.AddHttpClient<IDataService<Planet>, DataService<Planet>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
+            builder.Services.AddHttpClient<IDataService<Specie>, DataService<Specie>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
+            builder.Services.AddHttpClient<IDataService<Starship>, DataService<Starship>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
+            builder.Services.AddHttpClient<IDataService<Vehicle>, DataService<Vehicle>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
+
 
             await builder.Build().RunAsync();
         }
