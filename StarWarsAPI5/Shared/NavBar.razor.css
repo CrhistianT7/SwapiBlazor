@@ -1,0 +1,14 @@
+﻿a {
+    color: white;
+}
+
+a:hover {
+    color: yellow;
+    font-weight: bold;
+}
+
+.navbar-deco {
+    display: flex;
+    justify-content: center;
+    color: yellow;
+}

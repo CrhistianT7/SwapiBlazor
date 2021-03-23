@@ -13,7 +13,7 @@ namespace StarWarsAPI5.Pages.Planets
     public partial class PlanetDetail
     {
         [Inject]
-        public IPlanetDataService PlanetDataService { get; set; }
+        public IDataService<Planet> DataService{ get; set; }
         [Parameter]
         public string Name { get; set; }
         [Parameter]
@@ -21,7 +21,8 @@ namespace StarWarsAPI5.Pages.Planets
         public Planet Planet { get; set; } = new Planet();
         protected override async Task OnInitializedAsync()
         {
-            Planet = await PlanetDataService.GetPlanetByName(CurrentPage, Name);
+            var response = await DataService.GetAllData("planets", 1, Name);
+            Planet = response.Results.First();
         }
     }
 }

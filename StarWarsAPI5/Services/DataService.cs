@@ -15,15 +15,9 @@ namespace StarWarsAPI5.Services
         {
             _Http = Http;
         }
-        public async Task<SwapiListResponse<T>> GetAllData(string entity, int page, string nameFilter)
+        public async Task<SwapiListResponse<T>> GetAllData(string entity = "people", int page = 1, string nameFilter = "")
         {
-            return await _Http.GetFromJsonAsync<SwapiListResponse<T>>(_Http.BaseAddress.ToString() + $"{entity}/?Search={nameFilter}");   
+            return await _Http.GetFromJsonAsync<SwapiListResponse<T>>($"{entity}/?search={nameFilter}&page={page}");   
         }
-        /*public async Task<T> GetDataByName(string entity, string currentPage, string name)
-        {
-
-            var response = await _Http.GetFromJsonAsync<SwapiListResponse<T>>(_Http.BaseAddress.ToString() + $"{entity}/?page={int.Parse(currentPage)}");
-            return response.Results.FirstOrDefault(ch => ch.Name == name);
-        }*/
     }
 }

@@ -12,7 +12,7 @@ namespace StarWarsAPI5.Pages.Vehicles
 {
     public partial class VehicleDetail
     {
-        [Inject] IVehicleDataService VehicleDataService { get; set; }
+        [Inject] IDataService<Vehicle> DataService { get; set; }
         [Parameter]
         public string Name { get; set; }
         [Parameter]
@@ -20,7 +20,8 @@ namespace StarWarsAPI5.Pages.Vehicles
         public Vehicle Vehicle { get; set; } = new Vehicle();
         protected override async Task OnInitializedAsync()
         {
-            Vehicle = await VehicleDataService.GetVehicleByName(CurrentPage, Name);
+            var response = await DataService.GetAllData("vehicles", 1, Name);
+            Vehicle = response.Results.First();
         }
     }
 }

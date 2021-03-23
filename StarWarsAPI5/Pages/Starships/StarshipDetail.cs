@@ -13,7 +13,7 @@ namespace StarWarsAPI5.Pages.Starships
     public partial class StarshipDetail
     {
         [Inject]
-        public IStarshipDataService StarshipDataService { get; set; }
+        public IDataService<Starship> DataService { get; set; }
         [Parameter]
         public string Name { get; set; }
         [Parameter]
@@ -21,7 +21,8 @@ namespace StarWarsAPI5.Pages.Starships
         public Starship Starship { get; set; } = new Starship();
         protected override async Task OnInitializedAsync()
         {
-            Starship = await StarshipDataService.GetStarshipByName(CurrentPage, Name);
+            var response = await DataService.GetAllData("starships", 1, Name);
+            Starship = response.Results.First();
         }
     }
 }

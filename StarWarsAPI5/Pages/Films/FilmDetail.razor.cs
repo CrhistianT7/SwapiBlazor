@@ -12,7 +12,7 @@ namespace StarWarsAPI5.Pages.Films
 {
     public partial class FilmDetail
     {
-        [Inject] IFilmDataService FilmDataService { get; set; }
+        [Inject] IDataService<Film> DataService { get; set; }
         [Parameter]
         public string Title { get; set; }
         [Parameter]
@@ -20,7 +20,8 @@ namespace StarWarsAPI5.Pages.Films
         public Film Film { get; set; } = new Film();
         protected override async Task OnInitializedAsync()
         {
-            Film = await FilmDataService.GetFilmByTitle(CurrentPage, Title);
+            var response = await DataService.GetAllData("films", 1, Title);
+            Film = response.Results.First();
         }
     }
 }

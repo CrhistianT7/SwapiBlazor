@@ -12,46 +12,36 @@ namespace StarWarsAPI5.Pages.Species
 {
     public partial class Species
     {
-        private IEnumerable<Specie> _Species { get; set; }
-        [Inject]
-        public ISpecieDataService SpecieDataService { get; set; }
         [Inject]
         public IDataService<Specie> DataService { get; set; }
+        private IEnumerable<Specie> _Species { get; set; }
         private int CurrentPage = 1;
-        private int TotalPageQuantity = 4;
+        private int TotalPageQuantity = 1;
         public string NameFilter { get; set; } = "";
         protected override async Task OnInitializedAsync()
         {
             await LoadData();
         }
         private async Task SelectedPage(int page)
-
         {
             CurrentPage = page;
-            _Species = (await SpecieDataService.GetAllSpecies(page, NameFilter));
-        }
-        private async Task Filter()
-        {
-            Console.WriteLine("NameFilter Filter:");
-            Console.WriteLine(NameFilter);
-            var response = await DataService.GetAllData("species", CurrentPage, NameFilter);
-            _Species = response.Results.Where( sp => sp.Name.Contains(NameFilter));
+            await LoadData();
         }
         private async Task Clear()
         {
             NameFilter = string.Empty;
             await LoadData();
         }
-        private async Task OnInput()
+        private async Task OnInput(string newValue)
         {
-            Console.WriteLine("NameFilter OnInput:");
-            Console.WriteLine(NameFilter);
-            var response = await DataService.GetAllData("species", CurrentPage, NameFilter);
-            _Species = response.Results.Where(sp => sp.Name.Contains(NameFilter));
+            NameFilter = newValue;
+            CurrentPage = 1;
+            await LoadData();
         }
         private async Task LoadData()
         {
             var response = await DataService.GetAllData("species", CurrentPage, NameFilter);
+            TotalPageQuantity = (int)Math.Ceiling((decimal)response.Count / 10);
             _Species = response.Results;
         }
     }

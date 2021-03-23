@@ -1649,7 +1649,6 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\StarWarsAPI5\obj\Debug\net5
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.dll
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\StarWarsAPI5\obj\Debug\net5.0\ref\StarWarsAPI5.dll
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.pdb
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.csprojAssemblyReference.cache
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.GeneratedMSBuildEditorConfig.editorconfig
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.AssemblyInfoInputs.cache
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.AssemblyInfo.cs
@@ -1667,7 +1666,6 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDecla
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Shared\Footer.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Shared\Header.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.RazorComponent.output.cache
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\RazorDeclaration\StarWarsAPI5.dll
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.TagHelpers.input.cache
@@ -1684,7 +1682,6 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Page
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Shared\Footer.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Shared\Header.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\bin\Debug\net5.0\wwwroot\_framework\blazor.boot.json
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\bin\Debug\net5.0\StarWarsAPI5.StaticWebAssets.xml
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\bin\Debug\net5.0\StarWarsAPI5.dll
@@ -2445,7 +2442,6 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Shared\Footer.razor.rz.scp.css
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Shared\Header.razor.rz.scp.css
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\bundle\StarWarsAPI5.styles.css
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\projectbundle\StarWarsAPI5.bundle.scp.css
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.RazorTargetAssemblyInfo.cache
@@ -2486,3 +2482,6 @@ E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\Razor\Comp
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\bin\Debug\net5.0\wwwroot\_framework\System.Reactive.dll.gz
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\bin\Debug\net5.0\wwwroot\_framework\System.Reactive.dll
 E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\build-gz\RcCMDcMp.gz
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Shared\NavBar.razor.rz.scp.css
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\StarWarsAPI5.csprojAssemblyReference.cache
+E:\Ravn\BootCamp\Repository\SwapiBlazor\StarWarsAPI5\obj\Debug\net5.0\scopedcss\Shared\Pagination.razor.rz.scp.css

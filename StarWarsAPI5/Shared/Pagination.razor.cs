@@ -33,7 +33,7 @@ namespace StarWarsAPI5.Shared
             links = new List<LinkModel>();
             var isPreviousPageLinkEnabled = CurrentPage != 1;
             var previousPage = CurrentPage - 1;
-            links.Add(new LinkModel(previousPage, isPreviousPageLinkEnabled, "Previous"));
+            links.Add(new LinkModel(previousPage, isPreviousPageLinkEnabled, "<"));
 
             for (int i = 1; i <= TotalPagesQuantity; i++ )
             {
@@ -44,7 +44,7 @@ namespace StarWarsAPI5.Shared
             }
             var isNextPageLinkEnabled = CurrentPage != TotalPagesQuantity;
             var nextPage = CurrentPage + 1;
-            links.Add(new LinkModel(nextPage, isNextPageLinkEnabled, "Next"));
+            links.Add(new LinkModel(nextPage, isNextPageLinkEnabled, ">"));
         }
         class LinkModel
         {

@@ -1,0 +1,14 @@
+a[b-i2lmr4nbkd] {
+    color: white;
+}
+
+a:hover[b-i2lmr4nbkd] {
+    color: yellow;
+    font-weight: bold;
+}
+
+.navbar-deco[b-i2lmr4nbkd] {
+    display: flex;
+    justify-content: center;
+    color: yellow;
+}

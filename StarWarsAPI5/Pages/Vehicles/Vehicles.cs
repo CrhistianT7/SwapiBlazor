@@ -12,30 +12,37 @@ namespace StarWarsAPI5.Pages.Vehicles
 {
     public partial class Vehicles
     {
-        [Inject] HttpClient Http { get; set; }
-        private IEnumerable<Vehicle> _Vehicles { get; set; }
         [Inject]
-        public IVehicleDataService VehicleDataService { get; set; }
+        public IDataService<Vehicle> DataService { get; set; }
+        private IEnumerable<Vehicle> _Vehicles { get; set; }
         private int CurrentPage = 1;
-        private int TotalPageQuantity = 4;
+        private int TotalPageQuantity = 1;
         public string NameFilter { get; set; } = "";
         protected override async Task OnInitializedAsync()
         {
-            _Vehicles = await VehicleDataService.GetAllVehicles();
+            await LoadData();
         }
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
-            _Vehicles = await VehicleDataService.GetAllVehicles(page, NameFilter);
-        }
-        private async Task Filter()
-        {
-            _Vehicles = await VehicleDataService.GetAllVehicles(CurrentPage, NameFilter);
+            await LoadData();
         }
         private async Task Clear()
         {
-            NameFilter = "";
-            _Vehicles = await VehicleDataService.GetAllVehicles(CurrentPage, NameFilter);
+            NameFilter = string.Empty;
+            await LoadData();
+        }
+        private async Task OnInput(string newValue)
+        {
+            NameFilter = newValue;
+            CurrentPage = 1;
+            await LoadData();
+        }
+        private async Task LoadData()
+        {
+            var response = await DataService.GetAllData("vehicles", CurrentPage, NameFilter);
+            TotalPageQuantity = (int)Math.Ceiling((decimal)response.Count / 10);
+            _Vehicles = response.Results;
         }
     }
 }

@@ -14,27 +14,35 @@ namespace StarWarsAPI5.Pages.Starships
     {
         private IEnumerable<Starship> _Starships { get; set; }
         [Inject]
-        public IStarshipDataService StarshipDataService { get; set; }
+        public IDataService<Starship> DataService { get; set; }
         private int CurrentPage = 1;
-        private int TotalPageQuantity = 4;
+        private int TotalPageQuantity = 1;
         public string NameFilter { get; set; } = "";
         protected override async Task OnInitializedAsync()
         {
-            _Starships = (await StarshipDataService.GetAllStarships());
+            await LoadData();
         }
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
-            _Starships = (await StarshipDataService.GetAllStarships(page, NameFilter));
-        }
-        private async Task Filter()
-        {
-            _Starships = (await StarshipDataService.GetAllStarships(CurrentPage, NameFilter));
+            await LoadData();
         }
         private async Task Clear()
         {
             NameFilter = "";
-            _Starships = (await StarshipDataService.GetAllStarships(CurrentPage, NameFilter));
+            await LoadData();
+        }
+        private async Task OnInput(string newValue)
+        {
+            NameFilter = newValue;
+            CurrentPage = 1;
+            await LoadData();
+        }
+        private async Task LoadData()
+        {
+            var response = await DataService.GetAllData("starships", CurrentPage, NameFilter);
+            TotalPageQuantity = (int)Math.Ceiling((decimal)response.Count / 10);
+            _Starships = response.Results;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace StarWarsAPI5.Pages.Species
 {
     public partial class SpecieDetail
     {
-        [Inject] ISpecieDataService SpecieDataService { get; set; }
+        [Inject] IDataService<Specie> DataService { get; set; }
         [Parameter]
         public string Name { get; set; }
         [Parameter]
@@ -20,7 +20,8 @@ namespace StarWarsAPI5.Pages.Species
         public Specie Specie { get; set; } = new Specie();
         protected override async Task OnInitializedAsync()
         {
-            Specie = await SpecieDataService.GetSpecieByName(CurrentPage, Name);
+            var response = await DataService.GetAllData("species", 1, Name);
+            Specie = response.Results.First();
         }
     }
 }

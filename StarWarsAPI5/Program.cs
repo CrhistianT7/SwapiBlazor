@@ -21,18 +21,12 @@ namespace StarWarsAPI5
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://swapi.dev/api/") });
-            builder.Services.AddHttpClient<IPeopleDataService, PeopleDataService>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<IFilmDataService, FilmDataService>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<IPlanetDataService,PlanetDataService>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<ISpecieDataService, SpecieDataService>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<IStarshipDataService, StarshipDataService>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<IVehicleDataService, VehicleDataService>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<IDataService<Character>, DataService<Character>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<IDataService<Film>, DataService<Film>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<IDataService<Planet>, DataService<Planet>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<IDataService<Specie>, DataService<Specie>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<IDataService<Starship>, DataService<Starship>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
-            builder.Services.AddHttpClient<IDataService<Vehicle>, DataService<Vehicle>>(client => client.BaseAddress = new Uri("https://swapi.dev/api/"));
+            builder.Services.AddScoped<IDataService<Character>, DataService<Character>>();
+            builder.Services.AddScoped<IDataService<Film>, DataService<Film>>();
+            builder.Services.AddScoped<IDataService<Planet>, DataService<Planet>>();
+            builder.Services.AddScoped<IDataService<Specie>, DataService<Specie>>();
+            builder.Services.AddScoped<IDataService<Starship>, DataService<Starship>>();
+            builder.Services.AddScoped<IDataService<Vehicle>, DataService<Vehicle>>();
 
 
             await builder.Build().RunAsync();

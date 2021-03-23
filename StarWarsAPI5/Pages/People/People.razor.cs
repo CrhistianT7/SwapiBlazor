@@ -10,12 +10,9 @@ namespace StarWarsAPI5.Pages.People
 {
     public partial class People
     {
-        public IEnumerable<Character> _People { get; set; }
-        [Inject]
-        public IPeopleDataService PeopleDataService { get; set; }
         [Inject]
         IDataService<Character> DataService { get; set; }
-
+        public IEnumerable<Character> _People { get; set; }
         private int TotalPageQuantity;
         public int CurrentPage = 1;
         public string NameFilter { get; set; } = "";
@@ -30,21 +27,20 @@ namespace StarWarsAPI5.Pages.People
         }
         private async Task Clear()
         {
-            NameFilter = string.Empty;
+            NameFilter = "";
             await LoadData();
         }
-        private async Task OnInput()
+        private async Task OnInput(string newValue)
         {
-            Console.WriteLine("On Input");
+            NameFilter = newValue;
+            CurrentPage = 1;
             await LoadData();
         }
         private async Task LoadData()
         {
-            /*_People = await PeopleDataService.GetAllPeople(CurrentPage, NameFilter);*/
             var response = await DataService.GetAllData("people", CurrentPage, NameFilter);
-            TotalPageQuantity = response.Count / 10 + 1;
+            TotalPageQuantity = (int)Math.Ceiling((decimal)response.Count / 10);
             _People = response.Results;
-
         }
     }
 }

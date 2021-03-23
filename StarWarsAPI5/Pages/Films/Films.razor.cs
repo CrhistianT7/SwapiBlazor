@@ -21,27 +21,28 @@ namespace StarWarsAPI5.Pages.Films
 
         protected override async Task OnInitializedAsync()
         {
-            var response = await DataService.GetAllData("films", CurrentPage, NameFilter);
-            TotalPageQuantity = response.Count / 10 + 1;
-            _Films = response.Results;
+            await LoadData();
         }
         private async Task SelectedPage(int page)
         {
             CurrentPage = page;
             await LoadData();
         }
-        private async Task Filter()
-        {
-            await LoadData();
-        }
         private async Task Clear()
         {
-            NameFilter = string.Empty;
+            NameFilter = "";
+            await LoadData();
+        }
+        private async Task OnInput(string newValue)
+        {
+            NameFilter = newValue;
+            CurrentPage = 1;
             await LoadData();
         }
         private async Task LoadData()
         {
             var response = await DataService.GetAllData("films", CurrentPage, NameFilter);
+            TotalPageQuantity = (int)Math.Ceiling((decimal)response.Count / 10);
             _Films = response.Results;
         }
     }
