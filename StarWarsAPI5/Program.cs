@@ -21,12 +21,15 @@ namespace StarWarsAPI5
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://swapi.dev/api/") });
-            builder.Services.AddScoped<IDataService<Character>, DataService<Character>>();
-            builder.Services.AddScoped<IDataService<Film>, DataService<Film>>();
-            builder.Services.AddScoped<IDataService<Planet>, DataService<Planet>>();
-            builder.Services.AddScoped<IDataService<Specie>, DataService<Specie>>();
-            builder.Services.AddScoped<IDataService<Starship>, DataService<Starship>>();
-            builder.Services.AddScoped<IDataService<Vehicle>, DataService<Vehicle>>();
+
+            builder.Services.AddScoped(typeof(IDataService<>), typeof(DataService<>));
+
+            //builder.Services.AddScoped<IDataService<Character>, DataService<Character>>();
+            //builder.Services.AddScoped<IDataService<Film>, DataService<Film>>();
+            //builder.Services.AddScoped<IDataService<Planet>, DataService<Planet>>();
+            //builder.Services.AddScoped<IDataService<Specie>, DataService<Specie>>();
+            //builder.Services.AddScoped<IDataService<Starship>, DataService<Starship>>();
+            //builder.Services.AddScoped<IDataService<Vehicle>, DataService<Vehicle>>();
 
 
             await builder.Build().RunAsync();

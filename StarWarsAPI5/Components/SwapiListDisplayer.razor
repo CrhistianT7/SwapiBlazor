@@ -1,0 +1,20 @@
+﻿@typeparam TItem
+<Searcher OnClear="@OnClear" OnTextChange="@OnInput"></Searcher>
+
+<Pagination TotalPagesQuantity="@TotalPageQuantity" CurrentPage="@CurrentPage" Radius="2" SelectedPage="@OnPageSelected" />
+
+<div class="flex-container">
+    @if (Data != null)
+    {
+        @foreach (var item in Data)
+        {
+
+            @ItemTemplate(new ListContext() { CurrentPage = CurrentPage, Item = item })            
+        }
+    }
+    else
+    {
+        <Loading />
+    }
+</div>
+

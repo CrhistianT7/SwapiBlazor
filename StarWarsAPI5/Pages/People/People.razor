@@ -1,18 +1,17 @@
 ﻿@page "/people"
 
 @using StarWarsAPI5.Components 
+@using StarWarsSearcher.Entities
 
-<Searcher OnClear="Clear" OnTextChange="OnInput"></Searcher>
-
-<Pagination TotalPagesQuantity="TotalPageQuantity" CurrentPage="CurrentPage" Radius="2" SelectedPage="SelectedPage" />
-
-
-@if (_People != null)
-{
-    <DataContainer Entity="_People" CurrentPage="CurrentPage"></DataContainer>
-}
-else
-{
-    <Loading></Loading>
-}
-
+<SwapiListDisplayer TItem="Character" EntityName="people">
+    <ItemTemplate>
+        <div class="information-box">
+            <div><span style="color: yellow;">Name:</span><span style="color: white;"> @context.Item.Name</span></div>
+            <div><span style="color: yellow;">Height:</span> <span style="color: white;"> @context.Item.Height </span></div>
+            <div><span style="color: yellow;">Mass:</span> <span style="color: white;"> @context.Item.Mass</span></div>
+            <div><span style="color: yellow;">Skin Color:</span> <span style="color: white;"> @context.Item.SkinColor</span></div>
+            <div><span style="color: yellow;">Gender:</span> <span style="color: white;"> @context.Item.Gender</span></div>
+            <MoreInformation reference="@($"people/{context.Item.Name}/{context.CurrentPage}")">  More Information </MoreInformation>
+        </div>
+    </ItemTemplate>
+</SwapiListDisplayer>

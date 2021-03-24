@@ -1,21 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Ravn\\BootCamp\\Repository\\SwapiBlazor\\StarWarsAPI5\\StarWarsAPI5.csproj": {}
+    "E:\\Ravn\\ravn-challenges\\Christian\\StarWarsAPI5\\StarWarsAPI5.csproj": {}
   },
   "projects": {
-    "E:\\Ravn\\BootCamp\\Repository\\SwapiBlazor\\StarWarsAPI5\\StarWarsAPI5.csproj": {
+    "E:\\Ravn\\ravn-challenges\\Christian\\StarWarsAPI5\\StarWarsAPI5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Ravn\\BootCamp\\Repository\\SwapiBlazor\\StarWarsAPI5\\StarWarsAPI5.csproj",
+        "projectUniqueName": "E:\\Ravn\\ravn-challenges\\Christian\\StarWarsAPI5\\StarWarsAPI5.csproj",
         "projectName": "StarWarsAPI5",
-        "projectPath": "E:\\Ravn\\BootCamp\\Repository\\SwapiBlazor\\StarWarsAPI5\\StarWarsAPI5.csproj",
-        "packagesPath": "C:\\Users\\Crhistian\\.nuget\\packages\\",
-        "outputPath": "E:\\Ravn\\BootCamp\\Repository\\SwapiBlazor\\StarWarsAPI5\\obj\\",
+        "projectPath": "E:\\Ravn\\ravn-challenges\\Christian\\StarWarsAPI5\\StarWarsAPI5.csproj",
+        "packagesPath": "C:\\Users\\Rafar55\\.nuget\\packages\\",
+        "outputPath": "E:\\Ravn\\ravn-challenges\\Christian\\StarWarsAPI5\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Crhistian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Rafar55\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
